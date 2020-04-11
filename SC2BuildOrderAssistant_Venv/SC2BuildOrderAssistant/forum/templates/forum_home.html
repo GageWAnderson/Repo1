@@ -22,18 +22,22 @@
     <body>
         <div id="navbar">
             <ul id="navbar-nav">
+                <!-- Hamburger Menu -->
+                <li><span class="open-slide" onclick="toggleSlideMenu()"><i class="fas fa-bars"></i></span></li>
                 <li><a href="">Forum</a></li>
                 <li><a href="">My Builds</a></li>
                 <li><a href="">Matchups</a></li>
                 <!-- Need to have an if statement to display Account vs. Sign in here... -->
                 <li><a href="">My Account</a></li>
             </ul>
-                    <!-- Hamburger Menu -->
-            <div id="hamburger-menu">
-                <span class="open-slide">
-                    <a href="javascript:void(0);" onclick="toggleSlideMenu()"><i class="fas fa-bars"></i></a>
-                </span>
-            </div>
         </div>
+
+        <main id="main">
+            <h1>Block Content Goes Here:</h1>
+            <br>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nam.</p>
+            {% block content %}{% endblock %} 
+        </main>
     </body>
 </html>
