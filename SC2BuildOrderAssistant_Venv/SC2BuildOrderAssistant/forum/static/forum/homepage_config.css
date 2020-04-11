@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background-color: #333333;
+    transition: .4s;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: block;
+    z-index: 1;
+}
+
+#navbar-nav {
+    height: 0;
+    width: 100%;
+    display: inline-block;
+}
+
+#navbar-nav a {
+    text-decoration: none;
+    color: #cccccc;
+    transition: .4s;
+    display: block;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+#navbar-nav a:hover {
+    color: white;
+    transition: .4s;
+}

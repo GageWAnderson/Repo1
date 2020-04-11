@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- CSS Styles -->
+        <!-- Reset Stylesheet: -->
+        <link rel="stylesheet" type="text/css" href="{% static 'forum/reset-stylesheet.css' %}">
+
+        <!-- Primary CSS Styling for Homepage -->
+        <link rel="stylesheet" type="text/css" href="{% static 'forum/homepage_config.css' %}">
+        
+        <!-- Font Awesome Icons Scripts(For Hamburger Menu) -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+        <!-- JS Scripts -->
+        <script src="{% static 'forum/homepage_animations.js' %}"></script>
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+        <title>SC2_Build_order_forum_home</title>
+    </head>
+    <body>
+        <div id="navbar">
+            <ul id="navbar-nav">
+                <li><a href="">Forum</a></li>
+                <li><a href="">My Builds</a></li>
+                <li><a href="">Matchups</a></li>
+                <!-- Need to have an if statement to display Account vs. Sign in here... -->
+                <li><a href="">My Account</a></li>
+            </ul>
+                    <!-- Hamburger Menu -->
+            <div id="hamburger-menu">
+                <span class="open-slide">
+                    <a href="javascript:void(0);" onclick="toggleSlideMenu()"><i class="fas fa-bars"></i></a>
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
