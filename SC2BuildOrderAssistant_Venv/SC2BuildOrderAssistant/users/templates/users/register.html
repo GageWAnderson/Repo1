@@ -1,0 +1,19 @@
+{% extends "forum/site_base.html" %}
+<!-- Within users app, it is possible to access templates from forum app-->
+{% block content %}
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset>
+                <h1>Create Account:</h1>
+                {{ form }}
+            </fieldset>
+            <div>
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+        <div>
+            <small>Already Have an account? <a href="#">Sign In</a></small>
+        </div>
+    </div>
+{% endblock content %}

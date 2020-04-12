@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 #navbar {
@@ -66,4 +67,12 @@ body {
 
 #main {
     position: absolute;
+    padding: 100px;
+}
+
+.post {
+    background-color: #cccccc;
+    padding: 10px;
+    margin: 10px;
+    border: black;
 }

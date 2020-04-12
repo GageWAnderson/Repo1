@@ -24,19 +24,28 @@
             <ul id="navbar-nav">
                 <!-- Hamburger Menu -->
                 <li><span class="open-slide" onclick="toggleSlideMenu()"><i class="fas fa-bars"></i></span></li>
-                <li><a href="">Forum</a></li>
-                <li><a href="">My Builds</a></li>
-                <li><a href="">Matchups</a></li>
+                <li><a href="{% url 'forum-home' %}">Forum</a></li>
+                <li><a href="{% url 'forum-home' %}">Post</a></li>
+                <li><a href="{% url 'account-home' %}">My Builds</a></li>
+                <li><a href="{% url 'forum-matchups' %}">Matchups</a></li>
                 <!-- Need to have an if statement to display Account vs. Sign in here... -->
-                <li><a href="">My Account</a></li>
+                <li><a href="{% url 'account-register' %}">Sign Up</a></li>
+                <li><a href="{% url 'account-register' %}">Log In</a></li>
+                <li><a href="{% url 'account-home' %}">My Account</a></li>
             </ul>
         </div>
 
         <main id="main">
+            <!-- Display any messages to the user at the top -->
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
             <h1>Block Content Goes Here:</h1>
-            <br>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, nam.</p>
             {% block content %}{% endblock %} 
         </main>
     </body>
