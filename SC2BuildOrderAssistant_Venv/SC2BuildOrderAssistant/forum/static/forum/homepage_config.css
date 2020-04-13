@@ -37,8 +37,8 @@ body {
     display: block;
     overflow: hidden;
     scroll-behavior: smooth;
-    padding: 20px;
-    font-size: 30px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 #navbar-nav a:hover {

@@ -25,13 +25,17 @@
                 <!-- Hamburger Menu -->
                 <li><span class="open-slide" onclick="toggleSlideMenu()"><i class="fas fa-bars"></i></span></li>
                 <li><a href="{% url 'forum-home' %}">Forum</a></li>
-                <li><a href="{% url 'forum-home' %}">Post</a></li>
-                <li><a href="{% url 'account-home' %}">My Builds</a></li>
+                <li><a href="{% url 'forum-new-post' %}">Post</a></li>
                 <li><a href="{% url 'forum-matchups' %}">Matchups</a></li>
                 <!-- Need to have an if statement to display Account vs. Sign in here... -->
-                <li><a href="{% url 'account-register' %}">Sign Up</a></li>
-                <li><a href="{% url 'account-register' %}">Log In</a></li>
-                <li><a href="{% url 'account-home' %}">My Account</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'account-builds' %}">My Builds</a></li>
+                    <li><a href="{% url 'account-home' %}">My Account</a></li>
+                    <li><a href="{% url 'account-logout' %}">Log Out</a></li>
+                {% else %}
+                    <li><a href="{% url 'account-login' %}">Log In</a></li>
+                    <li><a href="{% url 'account-register' %}">Sign Up</a></li>
+                {% endif %}
             </ul>
         </div>
 

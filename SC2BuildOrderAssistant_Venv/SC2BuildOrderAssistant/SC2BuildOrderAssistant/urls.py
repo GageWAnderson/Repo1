@@ -23,5 +23,7 @@ urlpatterns = [
     #URLs to Forum Main Page:
     path('',include('forum.urls')),
     path('forum/',include('forum.urls')),
-    path('users/',include('users.urls')),
+
+    #URLs to User management pages:
+    path('accounts/',include('users.urls')),
 ]

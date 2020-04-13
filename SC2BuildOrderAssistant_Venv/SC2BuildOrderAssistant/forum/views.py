@@ -45,3 +45,5 @@ class BuildsView(AccountView):
         return context
 
     #Define register,email,profile update forms here
+
+#Need a view for creating and updating posts:

@@ -34,5 +34,13 @@ class AccountView(LoginRequiredMixin,TemplateView):
         return context
 
 
-class AccountUpdateView(LoginRequiredMixin,AccountView):
+class AccountUpdateView(LoginRequiredMixin,TemplateView):
     template_name = "users/account_update.html"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        #Context here should include classes from the user object
+        #(Model) you made in the database 
+
+        return context
