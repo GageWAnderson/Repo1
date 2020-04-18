@@ -18,5 +18,5 @@ urlpatterns = [
     path('',ForumView.as_view(), name='forum-home'),
     path('matchups/',ForumView.as_view(), name='forum-matchups'),
     path('new_post/',ForumView.as_view(), name='forum-new-post'),
-    path('users/',include('users.urls')),
+    path('accounts/',include('users.urls')),
 ]

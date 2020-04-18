@@ -29,8 +29,8 @@
                 <li><a href="{% url 'forum-matchups' %}">Matchups</a></li>
                 <!-- Need to have an if statement to display Account vs. Sign in here... -->
                 {% if user.is_authenticated %}
-                <li><a href="{% url 'account-builds' %}">My Builds</a></li>
-                    <li><a href="{% url 'account-home' %}">My Account</a></li>
+                <li><a href="{% url 'account-builds' user.username %}" pk=user.username>My Builds</a></li>
+                    <li><a href="{% url 'account-home' user.username %}" pk=user.username>My Account</a></li>
                     <li><a href="{% url 'account-logout' %}">Log Out</a></li>
                 {% else %}
                     <li><a href="{% url 'account-login' %}">Log In</a></li>
